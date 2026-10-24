@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#06143b">
+  <meta name="description" content="Sahil's Game Store — Play, Explore, Have Fun!">
+
+  <title>Sahil's Game Store | Play & Have Fun</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <a href="#home" class="brand">
+      <span class="brand-icon">🎮</span>
+      <span class="brand-text">
+        <strong>Sahil's</strong>
+        <b>Game Store</b>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-link active">🏠 Home</a>
+      <a href="#games" class="nav-link">🎮 Games</a>
+      <a href="#about" class="nav-link">ℹ️ About</a>
+      <a href="#contact" class="nav-link">✉️ Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="hero-tag">🎉 WELCOME, GAMER!</span>
+
+        <h1>
+          Your Next<br>
+          <span>Adventure Starts</span><br>
+          Here!
+        </h1>
+
+        <p>Discover fun games made for everyone.</p>
+
+        <a href="#games" class="hero-button">
+          🎮 Explore Games <span>➜</span>
+        </a>
+
+        <div class="hero-features">
+          <span>✨ Fun Games</span>
+          <span>📱 Mobile Friendly</span>
+          <span>🕹️ Play Anytime</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="art-glow"></div>
+
+        <div class="floating-icon star-one">⭐</div>
+        <div class="floating-icon star-two">✨</div>
+        <div class="floating-icon star-three">🎮</div>
+
+        <div class="gamer-emoji" aria-label="Cartoon gamer">🧑🏻‍💻</div>
+        <div class="gamer-caption">
+          <span>PLAY</span>
+          <span>EXPLORE</span>
+          <span>HAVE FUN!</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GAMES SECTION ========== -->
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <span class="section-tag">🕹️ GAME ZONE</span>
+        <h2>Choose Your <span>Adventure!</span></h2>
+        <p>Pick a game, press play and enjoy the fun.</p>
+      </div>
+
+      <div class="game-grid">
+
+        <!-- GAME 1 -->
+        <article class="game-card yellow-card">
+          <a class="game-image-link"
+             href="tik-tak-toi.html"
+             aria-label="Play Tic-Tac-Toe">
+            <img
+              src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=900&q=85"
+              alt="Gaming controller for Tic-Tac-Toe"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">01</span>
+          </a>
+
+          <div class="game-info">
+            <h3>Tic-Tac-Toe</h3>
+            <p>Think · Plan · Win</p>
+            <a href="tik-tak-toi.html"
+               class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+        <!-- GAME 2 -->
+        <article class="game-card cyan-card">
+          <a class="game-image-link"
+             href="memory_match.html"
+             aria-label="Play Memory Match">
+            <img
+              src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=85"
+              alt="Colorful video game scene for Memory Match"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">02</span>
+          </a>
+
+          <div class="game-info">
+            <h3>Memory Match</h3>
+            <p>Find Pairs · Boost Memory</p>
+            <a href="memory_match.html"
+               class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+        <!-- GAME 3 -->
+        <article class="game-card green-card">
+          <a class="game-image-link"
+             href="snake.html"
+             aria-label="Play Snake Game">
+            <img
+              src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85"
+              alt="Retro arcade game setup for Snake Game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">03</span>
+          </a>
+
+          <div class="game-info">
+            <h3>Snake Game</h3>
+            <p>Eat · Grow · Survive</p>
+            <a href="snake.html"
+               class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+        <!-- GAME 4 -->
+        <article class="game-card pink-card">
+          <a class="game-image-link"
+             href="battle_arina.html"
+             aria-label="Play 2D Shooter">
+            <img
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85"
+              alt="Gaming action setup for 2D Shooter"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">04</span>
+          </a>
+
+          <div class="game-info">
+            <h3>2D Shooter</h3>
+            <p>Aim · Shoot · Survive</p>
+            <a href="battle_arina.html"
+               class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+                
+        
+        <!-- GAME 5 -->
+        <article class="game-card yellow-card">
+          <a class="game-image-link"
+            href="bubble_pop.html"
+            aria-label="Play Bubble Pop">
+            <img
+              src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=85"
+              alt="Colorful neon lights for Bubble Pop game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">05</span>
+          </a>
+          <div class="game-info">
+            <h3>Bubble Pop</h3>
+            <p>Pop · Score · Have Fun</p>
+            <a href="bubble_pop.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+                
+        <!-- GAME 6 -->
+        <article class="game-card cyan-card">
+          <a class="game-image-link"
+            href="brick_breaker.html"
+            aria-label="Play Brick Breaker">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=85"
+              alt="Gaming setup for Brick Breaker game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">06</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Brick Breaker</h3>
+            <p>Bounce · Break · Win</p>
+            <a href="brick_breaker.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+        <!-- GAME 7 -->
+        <article class="game-card green-card">
+          <a class="game-image-link"
+            href="car_racing.html"
+            aria-label="Play Car Racing">
+            <img
+              src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85"
+              alt="Sports car for Car Racing game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">07</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Car Racing</h3>
+            <p>Race · Drift · Win</p>
+            <a href="car_racing.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+        <!-- GAME 8 -->
+        <article class="game-card pink-card">
+          <a class="game-image-link"
+            href="crystal_dash.html"
+            aria-label="Play Crystal Dash">
+            <img
+              src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85"
+              alt="Glowing crystals for Crystal Dash game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">08</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Crystal Dash</h3>
+            <p>Run · Collect · Survive</p>
+            <a href="crystal_dash.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+        
+        <!-- FRUIT CATCHER GAME 9 -->
+        <article class="game-card yellow-card">
+          <a class="game-image-link"
+            href="fruit_catcher.html"
+            aria-label="Play Fruit Catcher">
+            <img
+              src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=900&q=85"
+              alt="Fresh colorful fruits for Fruit Catcher game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">09</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Fruit Catcher</h3>
+            <p>Catch · Collect · Score</p>
+            <a href="fruit_catcher.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+        
+        
+        <!-- MATH QUIZ GAME 10 -->
+        <article class="game-card cyan-card">
+          <a class="game-image-link"
+            href="math_quiz.html"
+            aria-label="Play Math Quiz">
+            <img
+              src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=900&q=85"
+              alt="Mathematics equations for Math Quiz game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">10</span>
+          </a>
+          
+          <div class="game-info"> 
+            <h3>Math Quiz</h3>
+            <p>Calculate · Think · Win</p>
+            <a href="math_quiz.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>          
+        </article>
+        
+        <!-- MEMORY CHALLENGE GAME 11 -->
+        <article class="game-card green-card">
+          <a class="game-image-link"
+            href="memory_challenge.html"
+            aria-label="Play Memory Challenge">
+            <img
+              src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=900&q=85"
+              alt="Colorful cards for Memory Challenge game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">11</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Memory Challenge</h3>
+            <p>Remember · Match · Win</p>
+            <a href="memory_challenge.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+        
+        <!-- WHACK-A-MOLE GAME 12 -->
+        <article class="game-card pink-card">
+          <a class="game-image-link"
+            href="whack-a-mole.html"
+            aria-label="Play Whack-a-Mole">
+            <img
+              src="https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=900&q=85"
+              alt="Cute mole character for Whack-a-Mole game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">12</span>
+          </a>
+          <div class="game-info">
+            <h3>Whack-a-Mole</h3>
+            <p>Tap · Hit · Score</p>
+            <a href="whack-a-mole.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+        
+        <!-- SPACE SHOOTER GAME 13 -->
+        <article class="game-card yellow-card">
+          <a class="game-image-link"
+            href="space_shooter.html"
+            aria-label="Play Space Shooter">
+            <img
+              src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
+              alt="Outer space scene for Space Shooter game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">13</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Space Shooter</h3>
+            <p>Shoot · Dodge · Survive</p>
+            <a href="space_shooter.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+        
+        <!-- PIKACHU RUNNING GAME 14 -->
+        <article class="game-card cyan-card">
+          <a class="game-image-link"
+            href="pikachu_running.html"
+            aria-label="Play Pikachu Running Game">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=85"
+              alt="Colorful gaming scene for Pikachu Running Game"
+              class="game-image"
+              loading="lazy">
+            <span class="game-number">14</span>
+          </a>
+          
+          <div class="game-info">
+            <h3>Pikachu Running</h3>
+            <p>Run · Jump · Dodge</p>
+            <a href="pikachu_running.html"
+              class="play-button">🎮 Play Now <span>›</span></a>
+          </div>
+        </article>
+
+        
+        
+      </div>
+
+      <p class="more-games">
+        🚀 More exciting games coming soon!
+      </p>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about-section" id="about">
+      <div class="about-icon">🏆</div>
+      <div>
+        <span class="section-tag">ABOUT OUR STORE</span>
+        <h2>Made for Fun. Built with Passion.</h2>
+        <p>
+          Sahil's Game Store is a colorful collection of browser games
+          created to make playtime fun. Explore different challenges
+          and discover your next favourite game!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="contact">
+    <div class="footer-wave"></div>
+
+    <div class="footer-content">
+      <a href="#home" class="footer-brand">🎮 Sahil's Game Store</a>
+      <p>Made with 💗 by <strong>Sahil</strong></p>
+      <p class="footer-tagline">Play · Explore · Have Fun!</p>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Sahil's Game Store. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top"
+    aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
