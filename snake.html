@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Mania 🐍</title>
+  <link rel="stylesheet" href="snake.css">
+  <script src="snake.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header>
+      <h1>🐍 Snake Mania</h1>
+      <p>Eat fruits, grow bigger and beat your best!</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <span>🍎 Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>🏆 Best</span>
+        <strong id="best">0</strong>
+      </div>
+    </section>
+
+    <div class="board-wrap">
+      <canvas id="board"
+        width="400" height="400"
+        aria-label="Snake game board">
+      </canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <div id="overlay-emoji" class="big-emoji">🐍</div>
+          <h2 id="overlay-title">Ready to Play?</h2>
+          <p id="overlay-text">Collect fruits and grow your snake!</p>
+          <button id="start-btn" class="primary-btn">
+            ▶ Start Game
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="pause-btn" disabled>⏸ Pause</button>
+      <button id="restart-btn">🔄 Restart</button>
+    </div>
+
+    <p class="help">💻 Use arrow keys or WASD to move</p>
+    <p class="help">📱 Use the buttons below on your phone</p>
+
+    <section class="dpad" aria-label="Snake movement controls">
+      <button class="direction up" data-dir="up" aria-label="Move up">▲</button>
+      <button class="direction left" data-dir="left" aria-label="Move left">◀</button>
+      <button class="direction down" data-dir="down" aria-label="Move down">▼</button>
+      <button class="direction right" data-dir="right" aria-label="Move right">▶</button>
+    </section>
+
+    <footer>Made with 💚 for little gamers!</footer>
+  </main>
+</body>
+</html>

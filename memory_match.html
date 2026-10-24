@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f6e9" />
+    <title>Little Garden — Fruit &amp; Veggie Match</title>
+    <meta name="description" content="A gentle little garden memory game. Find the fruit and veggie pairs!" />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="memory_match.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Little Garden home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>little garden</span>
+        </a>
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Turn sound on">
+          <span class="sound-icon" aria-hidden="true">♫</span><span id="sound-label">Sound off</span>
+        </button>
+      </header>
+
+      <section class="intro" aria-labelledby="game-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="sun-dot" aria-hidden="true"></span> A little game for curious minds</p>
+          <h1 id="game-title">Garden <span>pairs</span></h1>
+          <p class="intro-text">Turn over the cards and find all the fruit &amp; veggie friends.</p>
+        </div>
+        <div class="sun-doodle" aria-hidden="true">
+          <span class="sun-face">☀</span>
+          <span class="doodle-leaf leaf-one"></span><span class="doodle-leaf leaf-two"></span>
+        </div>
+      </section>
+
+      <section class="game-panel" aria-label="Memory match game">
+        <div class="game-toolbar">
+          <div class="stats" aria-label="Game score">
+            <div class="stat"><span class="stat-label">Moves</span><strong id="moves">0</strong></div>
+            <span class="stat-divider" aria-hidden="true"></span>
+            <div class="stat"><span class="stat-label">Found</span><strong><span id="pairs">0</span><small> / 4</small></strong></div>
+            <span class="stat-divider score-divider" aria-hidden="true"></span>
+            <div class="stat score-stat"><span class="stat-label">Score</span><strong id="score">0</strong></div>
+          </div>
+          <div class="toolbar-actions">
+            <button class="text-button" id="hint-button" type="button"><span aria-hidden="true">✳</span> Show a pair</button>
+            <button class="restart-button" id="restart-button" type="button" aria-label="Start a fresh game"><span aria-hidden="true">↻</span><span class="restart-label">New game</span></button>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <div class="board" id="board" role="group" aria-label="Eight fruit and vegetable cards"></div>
+          <div class="garden-line" aria-hidden="true"><span></span><i></i><span></span><i></i><span></span></div>
+        </div>
+        <p class="helper-note"><span aria-hidden="true">☘</span> Take your time — there’s no rush.</p>
+      </section>
+
+      <footer class="page-footer">
+        <div class="best-score"><span class="best-star" aria-hidden="true">✦</span><span>Garden best</span><strong id="best-score">—</strong></div>
+        <p>Every match is a little win.</p>
+        <span class="footer-sprig" aria-hidden="true">❧</span>
+      </footer>
+
+      <div class="win-overlay" id="win-overlay" hidden>
+        <section class="win-card" role="dialog" aria-modal="true" aria-labelledby="win-title" aria-describedby="win-message">
+          <div class="win-sparkles" aria-hidden="true">✦　✿　✦</div>
+          <div class="win-bouquet" aria-hidden="true">🍓 🍐 🥕</div>
+          <p class="eyebrow">Lovely growing!</p>
+          <h2 id="win-title">You found<br />all the friends!</h2>
+          <p id="win-message" class="win-message">A garden full of matches. What a lovely little win.</p>
+          <div class="win-score"><span>Your garden score</span><strong id="final-score">400</strong></div>
+          <button class="play-again-button" id="play-again" type="button">Play again <span aria-hidden="true">↗</span></button>
+        </section>
+      </div>
+      <p class="sr-only" id="live-status" aria-live="polite" aria-atomic="true"></p>
+    </main>
+    
+    <script src="memory_match.js" defer></script>
+  </body>
+</html>

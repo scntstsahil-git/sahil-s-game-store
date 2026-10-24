@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>Crystal Dash | Sahil's Game Store</title>
+  <link rel="stylesheet" href="crystal_dash.css">
+  <script src="crystal_dash.js" defer></script>
+</head>
+<body>
+  <main class="game-container">
+
+    <header class="game-header">
+      <p class="tag">SAHIL'S GAME STORE</p>
+      <h1>💎 Crystal Dash</h1>
+      <p class="subtitle">Collect crystals. Dodge meteors. Save the galaxy!</p>
+    </header>
+
+    <section class="hud" aria-label="Game statistics">
+      <div class="stat">
+        <span>💎 Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>❤️ Health</span>
+        <strong id="health">3</strong>
+      </div>
+      <div class="stat">
+        <span>🏆 Best</span>
+        <strong id="best">0</strong>
+      </div>
+    </section>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"
+              width="800" height="450"
+              aria-label="Crystal Dash game area">
+      </canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="big-icon" id="overlayIcon">🚀</div>
+          <h2 id="overlayTitle">Ready, Explorer?</h2>
+          <p id="overlayText">
+            Collect glowing crystals and avoid meteors!
+          </p>
+          <button id="startBtn">🚀 Start Mission</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="instructions">
+      💻 Laptop: Arrow keys or WASD
+      <br>
+      📱 Mobile: Use the buttons below
+    </p>
+
+    <section class="mobile-controls" aria-label="Touch controls">
+      <button class="control-btn" data-key="ArrowLeft"
+              aria-label="Move left">◀</button>
+      <button class="control-btn" data-key="ArrowUp"
+              aria-label="Move up">▲</button>
+      <button class="control-btn" data-key="ArrowDown"
+              aria-label="Move down">▼</button>
+      <button class="control-btn" data-key="ArrowRight"
+              aria-label="Move right">▶</button>
+    </section>
+
+    <footer>Made with 💙 by Scientist Sahil</footer>
+  </main>
+</body>
+</html>

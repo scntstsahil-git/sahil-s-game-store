@@ -1,0 +1,293 @@
+
+/* ===== Basic Setup ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 18px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(circle at top, #192b55, #080d1b 65%);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Main Container ===== */
+.game-container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.game-header {
+  margin-bottom: 16px;
+}
+
+.game-header h1 {
+  color: #76e8ff;
+  font-size: clamp(25px, 6vw, 36px);
+  margin-bottom: 7px;
+  text-shadow: 0 0 16px #22c8ff66;
+}
+
+.game-header p {
+  color: #c2d1e9;
+  font-size: 14px;
+}
+
+/* ===== Score Board ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.stat-box {
+  padding: 10px 4px;
+  background: #121d36;
+  border: 1px solid #34466b;
+  border-radius: 12px;
+}
+
+.stat-box span {
+  display: block;
+  margin-bottom: 5px;
+  color: #aebfdd;
+  font-size: 12px;
+}
+
+.stat-box strong {
+  color: #ffe16a;
+  font-size: 21px;
+}
+
+/* ===== Game Area ===== */
+.game-area {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #465d8b;
+  border-radius: 15px;
+  background: #090f22;
+  box-shadow:
+    0 0 25px #247cff25,
+    inset 0 0 20px #247cff10;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  touch-action: none;
+}
+
+/* ===== Overlay ===== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  background: #080d1be8;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h2 {
+  color: #76e8ff;
+  font-size: clamp(24px, 6vw, 34px);
+}
+
+.overlay p {
+  max-width: 290px;
+  color: #d1dcf1;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+button {
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#startBtn {
+  padding: 13px 24px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #75efff, #7189ff);
+  color: #091327;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#startBtn:active {
+  transform: scale(0.96);
+}
+
+/* ===== Game Controls ===== */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 14px 0 9px;
+}
+
+.controls button {
+  min-width: 75px;
+  min-height: 48px;
+  padding: 8px 12px;
+  border: 1px solid #425b87;
+  border-radius: 12px;
+  background: #152541;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#pauseBtn {
+  min-width: 110px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #23385c;
+}
+
+.controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.controls button:active:not(:disabled) {
+  background: #35578c;
+}
+
+.help-text {
+  color: #b6c7e2;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 360px) {
+  body {
+    padding: 10px 7px;
+  }
+
+  .stats {
+    gap: 5px;
+  }
+
+  .stat-box {
+    padding: 8px 2px;
+  }
+
+  .stat-box strong {
+    font-size: 17px;
+  }
+
+  .stat-box span {
+    font-size: 10px;
+  }
+
+  .controls {
+    gap: 7px;
+  }
+
+  .controls button {
+    min-width: 62px;
+    min-height: 44px;
+    padding: 6px;
+  }
+
+  #pauseBtn {
+    min-width: 92px;
+    font-size: 12px;
+  }
+}
+
+/* ===== Phone Landscape ===== */
+@media (orientation: landscape) and (max-height: 520px) {
+  body {
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .game-container {
+    max-width: 310px;
+  }
+
+  .game-header {
+    margin-bottom: 7px;
+  }
+
+  .game-header h1 {
+    font-size: 23px;
+  }
+
+  .game-header p {
+    font-size: 11px;
+  }
+
+  .stats {
+    gap: 5px;
+    margin-bottom: 6px;
+  }
+
+  .stat-box {
+    padding: 5px 2px;
+  }
+
+  .stat-box span {
+    font-size: 10px;
+  }
+
+  .stat-box strong {
+    font-size: 15px;
+  }
+
+  .game-area {
+    max-width: 270px;
+    margin: auto;
+  }
+
+  .controls {
+    margin: 6px 0;
+    gap: 8px;
+  }
+
+  .controls button {
+    min-height: 35px;
+    min-width: 55px;
+    padding: 4px;
+    font-size: 17px;
+  }
+
+  #pauseBtn {
+    min-width: 90px;
+    font-size: 12px;
+  }
+
+  .help-text {
+    font-size: 10px;
+  }
+}
+
+

@@ -1,0 +1,312 @@
+
+/* ===== Basic Setup ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #151533, #29265b, #111827);
+}
+
+/* ===== Main Container ===== */
+
+.game-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 25px;
+    text-align: center;
+    background: #ffffff0d;
+    border: 1px solid #ffffff20;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px #00000040;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.game-header h1 {
+    font-size: clamp(28px, 6vw, 38px);
+    color: #f8d66d;
+    margin-bottom: 10px;
+}
+
+.game-header p {
+    color: #c8c8e6;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ===== Score Cards ===== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 25px 0 15px;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 5px;
+    background: #ffffff12;
+    border: 1px solid #ffffff12;
+    border-radius: 15px;
+}
+
+.stat-card span {
+    color: #d2d2ed;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.stat-card strong {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+/* ===== Status Message ===== */
+
+.status {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-bottom: 12px;
+    color: #f8d66d;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* ===== Game Board ===== */
+
+.game-board {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    background: #09091d;
+    border: 3px solid #ffffff15;
+    border-radius: 50%;
+}
+
+/* ===== Color Buttons ===== */
+
+.color-btn {
+    min-width: 0;
+    border: 3px solid #ffffff30;
+    cursor: pointer;
+    opacity: 0.75;
+    transition:
+        transform 0.12s ease,
+        filter 0.12s ease,
+        opacity 0.12s ease,
+        box-shadow 0.12s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.green {
+    background: #20b96b;
+    border-radius: 100% 12px 12px 12px;
+}
+
+.red {
+    background: #f04452;
+    border-radius: 12px 100% 12px 12px;
+}
+
+.yellow {
+    background: #f7c948;
+    border-radius: 12px 12px 12px 100%;
+}
+
+.blue {
+    background: #3788f5;
+    border-radius: 12px 12px 100% 12px;
+}
+
+/* JS adds .active when a color lights up */
+
+.color-btn.active {
+    opacity: 1;
+    filter: brightness(1.4);
+    transform: scale(0.96);
+}
+
+.green.active {
+    box-shadow: 0 0 28px #20ff8a;
+}
+
+.red.active {
+    box-shadow: 0 0 28px #ff5364;
+}
+
+.yellow.active {
+    box-shadow: 0 0 28px #ffe875;
+}
+
+.blue.active {
+    box-shadow: 0 0 28px #55a5ff;
+}
+
+.color-btn:focus-visible,
+.start-btn:focus-visible,
+.sound-btn:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+/* ===== Main Button ===== */
+
+.start-btn {
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    color: #201a43;
+    background: linear-gradient(135deg, #ffe58a, #f5bf45);
+    border: none;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #b77b1c;
+    transition: transform 0.15s;
+}
+
+.start-btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #b77b1c;
+}
+
+/* ===== Sound Button ===== */
+
+.sound-btn {
+    margin-top: 14px;
+    padding: 10px 16px;
+    color: #ffffff;
+    background: #ffffff12;
+    border: 1px solid #ffffff30;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.instructions {
+    margin-top: 18px;
+    color: #c8c8e6;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ===== Small Phones ===== */
+
+@media (max-width: 380px) {
+    body {
+        padding: 10px;
+    }
+
+    .game-container {
+        padding: 16px;
+        border-radius: 22px;
+    }
+
+    .stats {
+        gap: 6px;
+        margin-top: 18px;
+    }
+
+    .stat-card {
+        padding: 10px 3px;
+    }
+
+    .stat-card strong {
+        font-size: 21px;
+    }
+
+    .game-board {
+        gap: 9px;
+        padding: 9px;
+    }
+}
+
+/* ===== Tablet and Laptop ===== */
+
+@media (min-width: 600px) {
+    .game-container {
+        padding: 30px;
+    }
+
+    .game-board {
+        max-width: 340px;
+        gap: 14px;
+        padding: 14px;
+    }
+}
+
+/* ===== Short Landscape Screens ===== */
+
+@media (orientation: landscape) and (max-height: 550px) {
+    body {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .game-container {
+        max-width: 440px;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .game-header h1 {
+        font-size: 26px;
+    }
+
+    .stats {
+        margin: 12px 0 6px;
+    }
+
+    .status {
+        min-height: 35px;
+        margin-bottom: 6px;
+    }
+
+    .game-board {
+        max-width: 230px;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .start-btn {
+        margin-top: 14px;
+        padding: 12px;
+    }
+
+    .instructions {
+        margin-top: 10px;
+    }
+}
+
+

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Catcher 🍎</title>
+  <link rel="stylesheet" href="fruit_catcher.css">
+</head>
+<body>
+
+  <main class="game-container">
+
+    <header class="game-header">
+      <div class="logo">🍓 Fruit Catcher</div>
+      <p>Catch fruits, avoid bombs!</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span>⭐ Score</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>🏆 Best</span>
+        <strong id="best">0</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>❤️ Lives</span>
+        <strong id="lives">3</strong>
+      </div>
+
+      <div class="stat-card">
+        <span>⏱️ Time</span>
+        <strong id="timer">45</strong>
+      </div>
+    </section>
+
+    <section class="game-board">
+      <canvas id="gameCanvas" width="800" height="500">
+        Your browser does not support canvas.
+      </canvas>
+
+      <div class="game-overlay" id="overlay">
+        <div class="overlay-card">
+          <div class="overlay-emoji" id="overlayEmoji">🍎</div>
+          <h2 id="overlayTitle">Ready to Play?</h2>
+          <p id="overlayMessage">
+            Catch the fruits and avoid the bombs!
+          </p>
+          <button id="startBtn">▶ Start Game</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button class="move-btn" id="leftBtn" aria-label="Move left">
+        ⬅️
+      </button>
+
+      <button class="move-btn" id="rightBtn" aria-label="Move right">
+        ➡️
+      </button>
+    </section>
+
+    <button class="restart-btn" id="restartBtn">
+      🔄 Restart Game
+    </button>
+
+    <p class="instructions">
+      💻 Use ← → or A / D keys.
+      <br>
+      📱 Use the arrow buttons to move your basket.
+    </p>
+
+    <footer>Made with ❤️ and JavaScript</footer>
+
+  </main>
+
+  <script src="fruit_catcher.js"></script>
+</body>
+</html>

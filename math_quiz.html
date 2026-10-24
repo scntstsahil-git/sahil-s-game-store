@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7868f6">
+  <title>Math Quest - Fun Quiz</title>
+  <link rel="stylesheet" href="math_quiz.css">
+</head>
+<body>
+
+  <main class="game-container">
+
+    <header class="header">
+      <div class="logo">🧠 Math Quest</div>
+      <p>Think fast, have fun, and level up!</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card score-card">
+        <span>⭐ Score</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="stat-card level-card">
+        <span>🚀 Level</span>
+        <strong id="level">1</strong>
+      </div>
+
+      <div class="stat-card best-card">
+        <span>🏆 Best</span>
+        <strong id="best">0</strong>
+      </div>
+    </section>
+
+    <section class="timer-section">
+      <div class="timer-info">
+        <span>⏱️ Time Left</span>
+        <strong id="timer">15s</strong>
+      </div>
+
+      <div class="timer-track">
+        <div id="timerBar" class="timer-bar"></div>
+      </div>
+    </section>
+
+    <section class="quiz-card">
+
+      <div class="question-label" id="questionLabel">
+        QUESTION 1
+      </div>
+
+      <div class="question" id="question">
+        Ready to play?
+      </div>
+
+      <p class="message" id="message" aria-live="polite">
+        Choose the correct answer!
+      </p>
+
+      <div class="options" id="options">
+        <button class="option-btn" disabled>A</button>
+        <button class="option-btn" disabled>B</button>
+        <button class="option-btn" disabled>C</button>
+        <button class="option-btn" disabled>D</button>
+      </div>
+
+      <button id="startBtn" class="start-btn">
+        🎮 Start Quiz
+      </button>
+
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-info">
+        <span>📚 Questions answered</span>
+        <strong id="answered">0</strong>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </section>
+
+    <p class="tip">
+      💡 Tip: Correct answers earn points. Every 5 correct
+      answers unlocks a new level!
+    </p>
+
+    <footer>Made with ❤️ for curious minds</footer>
+
+  </main>
+
+  <script src="math_quiz.js"></script>
+</body>
+</html>

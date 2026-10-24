@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pikachu Running Game</title>
+    <link rel="stylesheet" href="pikachu_running.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <h1>⚡ Pikachu Run!</h1>
+            <p>Jump, collect coins and avoid obstacles!</p>
+        </header>
+
+        <section class="stats">
+            <div class="stat">
+                <span>⭐ Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>🪙 Coins</span>
+                <strong id="coins">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>🏆 Best</span>
+                <strong id="best">0</strong>
+            </div>
+        </section>
+
+        <div class="game-wrapper">
+            <canvas id="gameCanvas"
+                    width="800"
+                    height="400"
+                    aria-label="Running game. Tap the game or press Space to jump.">
+            </canvas>
+
+            <div id="overlay" class="overlay">
+                <div class="overlay-card">
+                    <div class="big-icon">⚡</div>
+                    <h2 id="overlay-title">Ready to Run?</h2>
+                    <p id="overlay-message">
+                        Jump over obstacles and collect coins!
+                    </p>
+                    <button id="startBtn">▶ Start Game</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="jumpBtn" class="jump-btn">
+                ⬆ JUMP
+            </button>
+        </div>
+
+        <p class="help">
+            💻 Space / ↑ to jump
+            <span>•</span>
+            📱 Tap JUMP to leap
+        </p>
+
+    </main>
+
+    <script src="pikachu_running.js"></script>
+</body>
+</html>

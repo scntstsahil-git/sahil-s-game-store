@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter Arcade</title>
+  <link rel="stylesheet" href="space_shooter.css">
+  <script src="space_shooter.js" defer></script>
+</head>
+<body>
+
+  <main class="game-container">
+    <header class="game-header">
+      <h1>🚀 SPACE SHOOTER</h1>
+      <p>Defend the Galaxy</p>
+    </header>
+
+    <section class="stats">
+      <div>Score <strong id="score">0</strong></div>
+      <div>Best <strong id="bestScore">0</strong></div>
+      <div>Lives <strong id="lives">3</strong></div>
+    </section>
+
+    <div class="game-area">
+      <canvas id="gameCanvas" width="420" height="640"></canvas>
+
+      <div id="overlay" class="overlay">
+        <h2 id="overlayTitle">🚀 Ready, Pilot?</h2>
+        <p id="overlayMessage">
+          Destroy enemy ships and protect the galaxy!
+        </p>
+        <button id="startBtn" type="button">Start Mission</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="leftBtn" type="button" aria-label="Move left">◀</button>
+      <button id="fireBtn" type="button" aria-label="Fire weapon">🔥 FIRE</button>
+      <button id="rightBtn" type="button" aria-label="Move right">▶</button>
+    </div>
+
+    <button id="pauseBtn" class="pause-btn" type="button" disabled>
+      ⏸ Pause
+    </button>
+
+    <p class="instructions">
+      Keyboard: ← → / A D · Space: Fire · P: Pause
+    </p>
+  </main>
+
+</body>
+</html>

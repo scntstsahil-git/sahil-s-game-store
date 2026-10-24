@@ -1,0 +1,283 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px 12px;
+  color: #f4f4ff;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at top, #25236a, transparent 65%),
+    linear-gradient(135deg, #080b20, #10102e, #080b20);
+}
+
+.game-container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.game-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.tag {
+  color: #67e8ff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(30px, 6vw, 48px);
+  color: #ffffff;
+  text-shadow: 0 0 22px #7865ff;
+}
+
+.subtitle {
+  color: #c3c6ee;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.stat {
+  padding: 12px 8px;
+  text-align: center;
+  background: #171938;
+  border: 1px solid #393b73;
+  border-radius: 12px;
+}
+
+.stat span,
+.stat strong {
+  display: block;
+}
+
+.stat span {
+  color: #c6c9ef;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.stat strong {
+  color: #66edff;
+  font-size: 22px;
+}
+
+.canvas-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 2px solid #6862d8;
+  border-radius: 16px;
+  background: #080a20;
+  box-shadow: 0 0 28px #5146c455;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #080a20bb;
+  backdrop-filter: blur(5px);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-card {
+  width: 100%;
+  max-width: 340px;
+  padding: 22px 16px;
+  text-align: center;
+  background: #171938ed;
+  border: 1px solid #7770ff;
+  border-radius: 18px;
+}
+
+.big-icon {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.overlay-card h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  margin-bottom: 10px;
+}
+
+.overlay-card p {
+  color: #c7c9e9;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+button {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#startBtn {
+  border: none;
+  border-radius: 12px;
+  padding: 13px 22px;
+  color: #080b20;
+  background: linear-gradient(90deg, #6fffe9, #72baff);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px #4be8ff44;
+}
+
+#startBtn:active {
+  transform: scale(0.96);
+}
+
+.instructions {
+  text-align: center;
+  color: #c4c6e8;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 16px 0;
+}
+
+.mobile-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.control-btn {
+  width: 60px;
+  height: 54px;
+  border: 1px solid #625fd4;
+  border-radius: 14px;
+  color: white;
+  background: #20234b;
+  font-size: 22px;
+  font-weight: bold;
+  touch-action: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.control-btn:active,
+.control-btn.pressed {
+  background: #5850bf;
+  transform: scale(0.94);
+}
+
+button:focus-visible {
+  outline: 3px solid #6fffe9;
+  outline-offset: 3px;
+}
+
+footer {
+  text-align: center;
+  color: #9b9fc9;
+  font-size: 12px;
+  margin-top: 25px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 8px;
+  }
+
+  .game-header {
+    margin-bottom: 16px;
+  }
+
+  .hud {
+    gap: 6px;
+  }
+
+  .stat {
+    padding: 10px 4px;
+  }
+
+  .stat span {
+    font-size: 11px;
+  }
+
+  .stat strong {
+    font-size: 19px;
+  }
+
+  .control-btn {
+    width: 56px;
+    height: 52px;
+  }
+
+  .mobile-controls {
+    gap: 9px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  body {
+    padding: 8px;
+  }
+
+  .game-header {
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    margin-bottom: 4px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .subtitle {
+    margin-top: 4px;
+  }
+
+  .instructions {
+    margin: 8px 0;
+  }
+
+  .mobile-controls {
+    margin: 8px 0;
+  }
+
+  .control-btn {
+    height: 44px;
+  }
+
+  footer {
+    margin-top: 10px;
+  }
+}
+
+

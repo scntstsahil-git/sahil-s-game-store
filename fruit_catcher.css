@@ -1,0 +1,359 @@
+
+/* ===== Basic Setup ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 20px 12px;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #b8f3ff,
+    #d9ccff,
+    #ffe1ed
+  );
+  color: #30305e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Main Container ===== */
+.game-container {
+  width: 100%;
+  max-width: 850px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 4px solid #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 14px 35px rgba(82, 65, 160, 0.18);
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.game-header {
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: clamp(26px, 5vw, 40px);
+  font-weight: 900;
+  color: #ff5488;
+  text-shadow: 2px 3px 0 #ffe0ec;
+}
+
+.game-header p {
+  margin-top: 7px;
+  color: #77719b;
+  font-size: 15px;
+}
+
+/* ===== Score Cards ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  padding: 12px 5px;
+  border-radius: 17px;
+  background: #f1efff;
+  border: 2px solid #e1dcff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-card:nth-child(1) {
+  background: #fff1b9;
+  border-color: #ffe08a;
+}
+
+.stat-card:nth-child(2) {
+  background: #dff8e8;
+  border-color: #b7edcb;
+}
+
+.stat-card:nth-child(3) {
+  background: #ffe4ed;
+  border-color: #ffc4d7;
+}
+
+.stat-card:nth-child(4) {
+  background: #dff5ff;
+  border-color: #b9eaff;
+}
+
+.stat-card span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stat-card strong {
+  font-size: 23px;
+  color: #37345f;
+}
+
+/* ===== Game Board ===== */
+.game-board {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  border-radius: 22px;
+  background: #a7eaff;
+  box-shadow: 0 5px 0 #d9d2ff;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+}
+
+/* ===== Start / Game Over Overlay ===== */
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 15px;
+  background: rgba(50, 46, 100, 0.38);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-overlay.hidden {
+  display: none;
+}
+
+.overlay-card {
+  width: min(100%, 340px);
+  padding: 24px 18px;
+  background: #ffffff;
+  border: 4px solid #ffe08a;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(40, 30, 80, 0.2);
+}
+
+.overlay-emoji {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.overlay-card h2 {
+  color: #ff5488;
+  font-size: clamp(22px, 4vw, 30px);
+  margin-bottom: 10px;
+}
+
+.overlay-card p {
+  color: #716d91;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+#startBtn {
+  width: 100%;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ff6395, #ff8b67);
+  color: white;
+  font-size: 17px;
+  box-shadow: 0 5px 0 #e74d7d;
+}
+
+#startBtn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #e74d7d;
+}
+
+/* ===== Mobile Movement Buttons ===== */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 22px 0 15px;
+}
+
+.move-btn {
+  width: 100px;
+  height: 58px;
+  border: 3px solid #ffffff;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #b9a8ff, #9181f7);
+  box-shadow: 0 5px 0 #7764d8;
+  font-size: 27px;
+}
+
+.move-btn:active,
+.restart-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #7764d8;
+}
+
+/* ===== Restart Button ===== */
+.restart-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 14px;
+  background: #dff8e8;
+  color: #26764a;
+  box-shadow: 0 4px 0 #a7dfbc;
+  font-size: 15px;
+}
+
+.instructions {
+  margin: 20px 0 14px;
+  color: #77719b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer {
+  padding-top: 14px;
+  border-top: 2px dashed #e2ddff;
+  color: #9a92ba;
+  font-size: 12px;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 700px) {
+  body {
+    padding: 12px 8px;
+  }
+
+  .game-container {
+    padding: 16px 12px;
+    border-radius: 22px;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stat-card {
+    padding: 10px 3px;
+  }
+
+  .stat-card span {
+    font-size: 11px;
+  }
+
+  .stat-card strong {
+    font-size: 20px;
+  }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 380px) {
+  .game-container {
+    padding: 12px 8px;
+  }
+
+  .stats {
+    gap: 5px;
+  }
+
+  .stat-card {
+    border-radius: 12px;
+  }
+
+  .stat-card span {
+    font-size: 10px;
+  }
+
+  .stat-card strong {
+    font-size: 17px;
+  }
+
+  .controls {
+    gap: 18px;
+  }
+
+  .move-btn {
+    width: 85px;
+    height: 52px;
+  }
+
+  .overlay-card {
+    padding: 14px 12px;
+  }
+
+  .overlay-emoji {
+    font-size: 34px;
+    margin-bottom: 4px;
+  }
+
+  .overlay-card p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  #startBtn {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* ===== Landscape Phones ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .game-container {
+    max-width: 680px;
+    padding: 10px;
+  }
+
+  .game-header {
+    margin-bottom: 8px;
+  }
+
+  .game-header p {
+    margin-top: 3px;
+  }
+
+  .stats {
+    margin-bottom: 8px;
+  }
+
+  .stat-card {
+    padding: 5px;
+  }
+
+  .controls {
+    margin: 10px 0;
+  }
+
+  .move-btn {
+    height: 42px;
+  }
+
+  .instructions,
+  footer {
+    margin-top: 8px;
+  }
+}
+
+

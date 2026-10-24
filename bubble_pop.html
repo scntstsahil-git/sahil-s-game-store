@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bubble Pop 🎈</title>
+  <link rel="stylesheet" href="bubble_pop.css">
+  <script src="bubble_pop.js" defer></script>
+</head>
+<body>
+
+  <main class="game">
+    <header class="game-header">
+      <div class="logo">🫧 Bubble Pop!</div>
+      <p>Pop bubbles and beat your best score!</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card">
+        <span>⭐ Score</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>🏆 Best</span>
+        <strong id="best">0</strong>
+      </div>
+      <div class="stat-card">
+        <span>⏱️ Time</span>
+        <strong id="time">30</strong>
+      </div>
+    </section>
+
+    <div class="progress-track">
+      <div id="time-bar"></div>
+    </div>
+
+    <section id="play-area" aria-label="Bubble popping game">
+      <div id="message" class="message">
+        <div class="message-emoji">🎈</div>
+        <h2>Ready to Pop?</h2>
+        <p>Tap the colorful bubbles!</p>
+        <button id="start-btn" class="main-btn">
+          ▶ Start Game
+        </button>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="pause-btn" disabled>⏸ Pause</button>
+      <button id="restart-btn">🔄 Restart</button>
+      <button id="sound-btn" aria-pressed="false">
+        🔇 Sound Off
+      </button>
+    </section>
+
+    <footer>
+      Made with 💖 for little gamers!
+    </footer>
+  </main>
+
+</body>
+</html>

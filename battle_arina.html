@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commando 2D - Pixel Shooter</title>
+  <link rel="stylesheet" href="battle_arina.css">
+</head>
+<body>
+
+  <main class="game-container">
+    <header class="game-header">
+      <div class="logo">⚔ COMMANDO <span>2D</span></div>
+      <div class="mission-label">MISSION: SURVIVE</div>
+    </header>
+
+    <section class="hud">
+      <div>❤️ HEALTH <strong id="health">100%</strong></div>
+      <div>⭐ SCORE <strong id="score">0</strong></div>
+      <div>👾 ENEMIES <strong id="enemyCount">6</strong></div>
+      <button id="pauseBtn" disabled>Ⅱ PAUSE</button>
+    </section>
+
+    <div class="game-screen">
+      <canvas id="gameCanvas" width="960" height="540">
+        Your browser does not support Canvas.
+      </canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="mission-card">
+          <div class="card-icon">⚔️</div>
+          <h1 id="overlayTitle">COMMANDO 2D</h1>
+          <p id="overlayMessage">
+            Enter the battlefield. Defeat the enemies and reach the finish!
+          </p>
+          <button id="startBtn">▶ START MISSION</button>
+          <small>PIXEL COMBAT • SIDE SCROLLER</small>
+        </div>
+      </div>
+    </div>
+
+    <section class="controls">
+      <div class="control-group movement">
+        <button id="leftBtn" class="control-btn">◀</button>
+        <button id="rightBtn" class="control-btn">▶</button>
+        <button id="jumpBtn" class="control-btn jump">⬆ JUMP</button>
+      </div>
+
+      <button id="fireBtn" class="control-btn fire">✦ FIRE</button>
+    </section>
+
+    <footer>
+      <p>Keyboard: A/D or ←/→ to move · W/↑ to jump · SPACE to shoot · P to pause</p>
+    </footer>
+  </main>
+
+  <script src="battle_arina.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Racing Game</title>
+  <link rel="stylesheet" href="car_racing.css">
+</head>
+<body>
+
+  <main class="game-container">
+    <header class="game-header">
+      <h1>🏎️ Car Racing</h1>
+      <p>Avoid traffic • Collect coins</p>
+    </header>
+
+    <section class="score-board">
+      <div class="score-box">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="score-box">
+        <span>Coins 🪙</span>
+        <strong id="coins">0</strong>
+      </div>
+
+      <div class="score-box">
+        <span>Best 🏆</span>
+        <strong id="best">0</strong>
+      </div>
+    </section>
+
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="420" height="640">
+        Your browser does not support Canvas.
+      </canvas>
+
+      <div class="game-overlay" id="overlay">
+        <h2 id="overlayTitle">Ready to Race?</h2>
+        <p id="overlayMessage">
+          Traffic se bacho aur coins collect karo!
+        </p>
+        <button id="startBtn">▶ Start Game</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="leftBtn" aria-label="Move left">⬅️</button>
+      <button id="rightBtn" aria-label="Move right">➡️</button>
+    </div>
+
+    <p class="instructions">
+      Keyboard: ← → or A / D<br>
+      Mobile: Neeche ke buttons use karo
+    </p>
+  </main>
+
+  <script src="car_racing.js"></script>
+</body>
+</html>

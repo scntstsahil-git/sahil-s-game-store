@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brick Breaker Arcade</title>
+
+  <link rel="stylesheet" href="brick_breaker.css">
+</head>
+<body>
+
+  <main class="game-container">
+
+    <header class="game-header">
+      <h1>🎯 Brick Breaker</h1>
+      <p>Break the bricks. Beat your best!</p>
+    </header>
+
+    <section class="stats">
+      <div class="stat-box">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="stat-box">
+        <span>Best 🏆</span>
+        <strong id="bestScore">0</strong>
+      </div>
+
+      <div class="stat-box">
+        <span>Lives ❤️</span>
+        <strong id="lives">3</strong>
+      </div>
+
+      <div class="stat-box">
+        <span>Level</span>
+        <strong id="level">1</strong>
+      </div>
+    </section>
+
+    <div class="game-area">
+      <canvas id="gameCanvas" width="480" height="640">
+        Your browser does not support Canvas.
+      </canvas>
+
+      <div class="overlay" id="overlay">
+        <h2 id="overlayTitle">Brick Breaker</h2>
+
+        <p id="overlayMessage">
+          Ball ko paddle se bounce karao aur bricks todo!
+        </p>
+
+        <button id="startBtn">▶ Start Game</button>
+      </div>
+    </div>
+
+    <section class="controls">
+      <button id="leftBtn" aria-label="Move paddle left">
+        ⬅️
+      </button>
+
+      <button id="pauseBtn" disabled>
+        ⏸ Pause
+      </button>
+
+      <button id="rightBtn" aria-label="Move paddle right">
+        ➡️
+      </button>
+    </section>
+
+    <p class="help-text">
+      Keyboard: ← → or A / D<br>
+      Mobile: Arrow buttons ya game area par drag karo
+    </p>
+
+  </main>
+
+  <script src="brick_breaker.js"></script>
+</body>
+</html>

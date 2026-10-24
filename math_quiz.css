@@ -1,0 +1,427 @@
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple: #7868f6;
+  --dark: #34315f;
+  --muted: #8582a5;
+  --white: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  padding: 24px 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--dark);
+  background: linear-gradient(
+    135deg,
+    #b9f3ff,
+    #d9d0ff,
+    #ffe0ed
+  );
+}
+
+/* ===== Main Container ===== */
+.game-container {
+  width: 100%;
+  max-width: 650px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 4px solid white;
+  border-radius: 30px;
+  box-shadow: 0 18px 45px rgba(81, 65, 150, 0.18);
+}
+
+/* ===== Header ===== */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 900;
+  color: #7962ef;
+  text-shadow: 2px 3px 0 #e8e0ff;
+}
+
+.header p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== Stats ===== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 5px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+}
+
+.score-card {
+  background: #fff2c4;
+  border-color: #ffe39a;
+}
+
+.level-card {
+  background: #e7ddff;
+  border-color: #d5c5ff;
+}
+
+.best-card {
+  background: #d8f9e5;
+  border-color: #b7edca;
+}
+
+.stat-card span {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stat-card strong {
+  font-size: 25px;
+}
+
+/* ===== Timer ===== */
+.timer-section {
+  margin-bottom: 24px;
+}
+
+.timer-info,
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#timer {
+  color: #f05c87;
+  font-size: 19px;
+}
+
+.timer-track,
+.progress-track {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #eeeaff;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #58dba5, #83dfff);
+  transition: width 0.15s linear;
+}
+
+.timer-bar.warning {
+  background: linear-gradient(90deg, #ffb347, #ff6685);
+}
+
+/* ===== Quiz Card ===== */
+.quiz-card {
+  padding: 24px 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #f7f4ff, #fff4fa);
+  border: 2px solid #ebe5ff;
+  border-radius: 24px;
+}
+
+.question-label {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #e5deff;
+  color: #7157dc;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.question {
+  min-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  font-size: clamp(30px, 6vw, 43px);
+  font-weight: 900;
+  overflow-wrap: anywhere;
+}
+
+.message {
+  min-height: 25px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===== Answer Options ===== */
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  min-height: 58px;
+  padding: 12px;
+  border: 2px solid #ded7ff;
+  border-radius: 16px;
+  background: white;
+  color: var(--dark);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.option-btn:not(:disabled):hover {
+  transform: translateY(-3px);
+  background: #f0ebff;
+  border-color: #a89aff;
+}
+
+.option-btn:disabled {
+  cursor: default;
+}
+
+.option-btn.correct {
+  color: #167846;
+  background: #d9f9e5;
+  border-color: #64d995;
+}
+
+.option-btn.wrong {
+  color: #b52e54;
+  background: #ffe1e9;
+  border-color: #ff8eaa;
+}
+
+/* ===== Start Button ===== */
+.start-btn {
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #8874ff, #ff79b0);
+  color: white;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #6957cf;
+  touch-action: manipulation;
+  transition: transform 0.15s ease;
+}
+
+.start-btn:hover {
+  filter: brightness(1.04);
+}
+
+.start-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #6957cf;
+}
+
+/* ===== Progress ===== */
+.progress-section {
+  margin-top: 23px;
+}
+
+.progress-info {
+  color: #777394;
+  font-size: 13px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #62dca6, #8e82ff);
+  transition: width 0.25s ease;
+}
+
+/* ===== Footer ===== */
+.tip {
+  margin-top: 22px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #fff6d8;
+  color: #807047;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+footer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 2px dashed #e5dfff;
+  color: #aaa2c2;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 14px 8px;
+    align-items: flex-start;
+  }
+
+  .game-container {
+    padding: 20px 14px;
+    border-radius: 24px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .stats {
+    gap: 7px;
+  }
+
+  .stat-card {
+    padding: 12px 3px;
+    border-radius: 14px;
+  }
+
+  .stat-card span {
+    font-size: 11px;
+  }
+
+  .stat-card strong {
+    font-size: 22px;
+  }
+
+  .quiz-card {
+    padding: 20px 13px;
+  }
+
+  .option-btn {
+    min-height: 54px;
+    font-size: 18px;
+  }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 360px) {
+  .game-container {
+    padding: 16px 10px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .stat-card span {
+    font-size: 10px;
+  }
+
+  .stat-card strong {
+    font-size: 19px;
+  }
+
+  .options {
+    gap: 8px;
+  }
+
+  .option-btn {
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+
+  .question {
+    font-size: 29px;
+  }
+
+  .quiz-card {
+    padding: 17px 10px;
+  }
+}
+
+/* ===== Landscape Phones ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .game-container {
+    max-width: 680px;
+    padding: 16px;
+  }
+
+  .header {
+    margin-bottom: 12px;
+  }
+
+  .stats {
+    margin-bottom: 12px;
+  }
+
+  .timer-section {
+    margin-bottom: 14px;
+  }
+
+  .quiz-card {
+    padding: 14px;
+  }
+
+  .question {
+    min-height: 55px;
+    padding: 8px;
+  }
+
+  .options {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .option-btn {
+    min-height: 44px;
+  }
+
+  .tip {
+    margin-top: 12px;
+  }
+
+  footer {
+    margin-top: 12px;
+  }
+}
+
+

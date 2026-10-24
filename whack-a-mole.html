@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-Mole Game</title>
+    <link rel="stylesheet" href="whack-a-mole.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <h1>🐹 Whack-a-Mole!</h1>
+            <p>Catch the moles before time runs out!</p>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>🏆 Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⭐ Best</span>
+                <strong id="best">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>⏱️ Time</span>
+                <strong><span id="time">30</span>s</strong>
+            </div>
+        </section>
+
+        <div class="timer-track">
+            <div id="timer-bar"></div>
+        </div>
+
+        <div id="message" class="message">
+            Ready to catch some moles?
+        </div>
+
+        <section id="game-board" class="game-board">
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+            <button class="hole" aria-label="Mole hole">
+                <span class="mole">🐹</span>
+            </button>
+
+        </section>
+
+        <button id="start-btn" class="start-btn">
+            ▶ Start Game
+        </button>
+
+        <p class="instructions">
+            💡 Tap the mole to score points!
+        </p>
+
+    </main>
+
+    <script src="whack-a-mole.js"></script>
+</body>
+</html>
